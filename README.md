@@ -27,7 +27,7 @@ This request is used to create a new product.
 Typical response:
 - HTTP status **201 (Created)**
 - JSON object representing the created product
-
+![CreateProduct](first-rest-api-spring/src/main/resources/static/Screenshots/CreateProduct.png)
 ---
 
 #### Get Product by ID (GET)
@@ -42,7 +42,7 @@ This request is used to retrieve a single product by its identifier.
 Typical response:
 - HTTP status **200 (OK)** when the product exists
 - HTTP status **404 (Not Found)** when the product does not exist
-
+![GetById](first-rest-api-spring/src/main/resources/static/Screenshots/GetById.png)
 ---
 
 #### Get All Products (GET)
@@ -56,7 +56,7 @@ This request is used to retrieve all products stored in the system.
 Typical response:
 - HTTP status **200 (OK)**
 - JSON array of products
-
+![GetAllProducts](first-rest-api-spring/src/main/resources/static/Screenshots/GetAllProducts.png)
 ---
 
 #### Update Product (PUT)
@@ -71,7 +71,7 @@ This request is used to update an existing product.
 Typical response:
 - HTTP status **200 (OK)** when update is successful
 - HTTP status **404 (Not Found)** when the product does not exist
-
+![UpdateProduct](first-rest-api-spring/src/main/resources/static/Screenshots/UpdateProduct.png)
 ---
 
 #### Delete Product (DELETE)
@@ -85,9 +85,21 @@ This request is used to delete a product.
 Typical response:
 - HTTP status **204 (No Content)** when deletion is successful
 - HTTP status **404 (Not Found)** when the product does not exist
-
+![Delete](first-rest-api-spring/src/main/resources/static/Screenshots/Delete.png)
 ---
 
+## H2 Database – Brief Overview
+
+In this project, I used the **H2 in-memory database** to store product data for the REST API.  
+H2 runs together with the Spring Boot application and does not require any external database setup.
+
+The database is used only while the application is running. When the application is stopped or restarted, all data is cleared. This makes H2 suitable for development and testing.
+
+H2 is integrated using **Spring Data JPA**, which allows the application to automatically create database tables based on entity classes and handle data operations without writing SQL manually.
+
+![Database](first-rest-api-spring/src/main/resources/static/Screenshots/Database.png)
+
+---
 ### Summary
 
 Task 2 demonstrates how a REST API handles different types of requests and returns appropriate responses using standard HTTP methods and status codes. The application processes JSON data, handles errors properly, and can be easily tested and documented using Swagger UI.
